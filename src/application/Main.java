@@ -3,6 +3,7 @@ package application;
 import java.io.File;
 import java.io.IOException;
 
+import control_pck.MyGitHubProfile_Form_controller;
 import control_pck.MyGitHubProfile_controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +11,15 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+
+/**
+ *
+ * Main class take the control of main View
+ *
+ * @author JoseManuel
+ * @version 1.0.0
+ *
+ */
 
 public class Main extends Application {
 
@@ -20,7 +30,6 @@ public class Main extends Application {
 		// TODO Auto-generated constructor stub
 		// Constructor vacio
 	}
-
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -50,7 +59,7 @@ public class Main extends Application {
 			Scene scene = new Scene(MyGitHubProfile_view);
 			primaryStage.setScene(scene);
 
-			// Give the controller access to the main app.
+			// Give the controller access to the main.
 			MyGitHubProfile_controller controller = loader.getController();
 			controller.setMain(this);
 
@@ -59,13 +68,37 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 
-
-
-
 	}
 
+	/**
+	 * Connection method with the Graphics class ViewController Load the new
+	 * dialog to show GraphicalView on primaryStage
+	 *
+	 */
+	public void showMyGitHubProfile_view() {
 
+		MyGitHubProfile_Form_controller gphControler = new MyGitHubProfile_Form_controller();
+		gphControler.start(primaryStage);
 
+		// try {
+		// // Load the fxml file and create a new stage for the popup.
+		// FXMLLoader loader = new FXMLLoader();
+		// loader.setLocation(MainApp.class.getResource("../view/GraphicalView.fxml"));
+		// AnchorPane page = (AnchorPane) loader.load();
+		// Stage dialogStage = new Stage();
+		// dialogStage.setTitle("Graphical View");
+		// dialogStage.initModality(Modality.WINDOW_MODAL);
+		// dialogStage.initOwner(primaryStage);
+		// Scene scene = new Scene(page);
+		// dialogStage.setScene(scene);
+		// dialogStage.show();
+		//
+		// } catch (IOException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
+
+	}
 
 	/**
 	 * Method getPrimaryStage
@@ -76,8 +109,6 @@ public class Main extends Application {
 		return primaryStage;
 
 	}
-
-
 
 	public static void main(String[] args) {
 		launch(args);

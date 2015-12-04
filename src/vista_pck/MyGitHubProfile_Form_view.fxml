@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="151.0" layoutY="44.0" text="MyGitHubProfile Form">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="89.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/github_white.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="218.0" layoutY="310.0" mnemonicParsing="false" text="Submit" />
+            <TextField layoutX="157.0" layoutY="118.0" promptText="Name" />
+            <TextField layoutX="96.0" layoutY="185.0" prefHeight="31.0" prefWidth="308.0" promptText="Route Repository on GitHub" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
